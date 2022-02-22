@@ -17,8 +17,7 @@ export function Trending015() {
       <div className="circles015"></div>
       <div className="circles015"></div>
       </div>  
-    <div className="arrows015">right</div>  
-
+      <div className="arrows015">right</div>
     </div>
   )
 }
