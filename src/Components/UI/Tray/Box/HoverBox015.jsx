@@ -4,6 +4,8 @@ import {BsPlusLg} from 'react-icons/bs'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './hoverbox015.css'
+import { SiPrime } from 'react-icons/si'
+import { Image } from './Image'
 export function HoverBox({ val, id, type,onCustomClick }) {
   const [element,setElement]=useState({})
   // console.log(element)
@@ -30,8 +32,8 @@ export function HoverBox({ val, id, type,onCustomClick }) {
         type: type,
         title: type == 'tv' ? element.original_name : element.original_title
       });
-    }}>
-      <img src={val} alt="" width='100%' height='100%' />
+    }}>      
+      <Image src={val} alt="" width='100%' height='100%' />
       <div className='details'>
         <div className="flexBox">
           <MdOutlinePlayCircle size={65} onClick={() => {

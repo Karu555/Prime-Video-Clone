@@ -29,15 +29,15 @@ export function Trending015({ url1 }) {
       })
     })
     
-    intervelId=setInterval(() => {
-      setCurrent(p => {
-        if (p < 11) return (p + 1)
-        else {
-          clearInterval(intervelId);
-          return 0
-        };
-      });
-    },3500)
+    // intervelId=setInterval(() => {
+    //   setCurrent(p => {
+    //     if (p < 11) return (p + 1)
+    //     else {
+    //       clearInterval(intervelId);
+    //       return 0
+    //     };
+    //   });
+    // },3500)
   }, [])  
   
   return (
@@ -46,6 +46,7 @@ export function Trending015({ url1 }) {
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100% 100%',
     }}>
+      {console.log(givenarray[current])}
        <div div className="arrows015" style={{color:current==0?'transparent':'white'}} onClick={() => {
         setCurrent(p => {
           // if (p == 0) return givenarray.length - 1;

@@ -3,10 +3,14 @@
   border: 2px solid #00A8E1;  
   background-color: #1B2530;
   color: white;
-  padding: 1rem;
   text-align: center;
+  border-radius: 1%;
 }
 
+.hoverbox>.details{
+  padding: 1rem;
+
+}
 
 .hoverbox>.details>h4{
   color:#00A8E1;

@@ -1,0 +1,25 @@
+.messageBox{
+  position: absolute;
+  z-index: 100;
+  top: -6rem;
+  left: -8rem;
+  width: 110%;
+  height: 20%;
+  color: white;
+  font-weight: 700;
+  background-color: #252E39;
+}
+
+div.primeIc{
+  width:17% ;
+  height: 7%;
+  margin: 0 .2rem;
+  display: inline-block;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: .3rem;
+  border-bottom-right-radius: 1rem;
+  color: black;
+  background-color: #00A8E1;
+  /* box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px, rgba(0, 0, 0, 1) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px ; */
+  box-shadow: 3.5px 6.0px 1.0px hsl(0deg 0% 0% / 1);
+}
