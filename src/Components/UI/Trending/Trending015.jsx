@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Circles } from './Circles';
+import { Circles } from './Circles015';
 import './trending015.css'
 import { IoIosArrowForward,IoIosArrowBack } from 'react-icons/io'
 import axios from 'axios';
 const dummyArray = new Array(12).fill(1);
 
+let intervelId;
 export function Trending015({ url1 }) {
   
   const [givenarray, setGivenarray] = useState([1]);
@@ -26,7 +27,17 @@ export function Trending015({ url1 }) {
         // console.log(temp)
         return temp
       })
-    })   
+    })
+    
+    intervelId=setInterval(() => {
+      setCurrent(p => {
+        if (p < 11) return (p + 1)
+        else {
+          clearInterval(intervelId);
+          return 0
+        };
+      });
+    },3500)
   }, [])  
   
   return (

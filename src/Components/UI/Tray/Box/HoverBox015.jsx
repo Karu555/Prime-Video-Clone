@@ -1,7 +1,9 @@
-import {MdOutlineMessage} from 'react-icons/md'
+import {MdBlock, MdOutlineMessage, MdOutlinePlayCircle} from 'react-icons/md'
+import {IoPlayOutline} from 'react-icons/io5'
+import {BsPlusLg} from 'react-icons/bs'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import './box015.css'
+import './hoverbox015.css'
 export function HoverBox({ val, id, type,onCustomClick }) {
   const [element,setElement]=useState({})
   // console.log(element)
@@ -32,6 +34,15 @@ export function HoverBox({ val, id, type,onCustomClick }) {
       <img src={val} alt="" width='100%' height='100%' />
       <div className='details'>
         <div className="flexBox">
+          <MdOutlinePlayCircle size={65} onClick={() => {
+            console.log('Clicked!!')
+          }}/> 
+          <h3>Play</h3>
+          <div>
+          <IoPlayOutline size={35} />  
+          <BsPlusLg size={35} />
+          <MdBlock size={35}/>
+          </div>
         </div>
         <h4>Included with Prime</h4>
         <h3>{type=='tv'?element.original_name:element.original_title}</h3>

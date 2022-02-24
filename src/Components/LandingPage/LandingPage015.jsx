@@ -1,5 +1,5 @@
 
-import { Footer } from "../Footer/Footer.jsx";
+import { Footer } from "../Footer/Footer015.jsx";
 import { LanguagesPics } from "./Languagespics.jsx";
 import { Tray015 } from "../UI/Tray/Tray015.jsx"
 import { Trending015 } from "../UI/Trending/Trending015.jsx"

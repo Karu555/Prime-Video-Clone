@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './box015.css'
-import { HoverBox } from './HoverBox';
+import { HoverBox } from './HoverBox015';
 import {useNavigate} from 'react-router-dom'
 
 export function Box015({ val, smaller,element ,type}) {
