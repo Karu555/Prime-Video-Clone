@@ -1,4 +1,4 @@
-export const genreCode = [
+export const movieGenreCode = [
       {
         "id": 28,
         "name": "Action"

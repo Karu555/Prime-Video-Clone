@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import { MoviesPage015 } from './Components/MoviesPage/MoviesPage015';
+import { LandingPage015 } from './Components/LandingPage/LandingPage015';
 
 function App() {
   return (
     <div className="App">    
-      <MoviesPage015 />      
+      <LandingPage015/>      
     </div>
   );
 }

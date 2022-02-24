@@ -1,13 +1,33 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Circles } from './Circles';
 import './trending015.css'
 import { IoIosArrowForward,IoIosArrowBack } from 'react-icons/io'
+import axios from 'axios';
 const dummyArray = new Array(12).fill(1);
-export function Trending015({ givenarray }) {
+
+export function Trending015({ url1 }) {
+  
+  const [givenarray, setGivenarray] = useState([1]);
   const [current, setCurrent] = useState(0);
   function handleOnCircleClick(id) {
     setCurrent(id);
   }
+  
+  useEffect(() => {
+    axios.get(url1).then(res => {
+      return setGivenarray(() => {
+          // filtering the array results to remove elements with no images and further filtering 
+          // out out first 12
+        let temp = res.data.results.filter((el) => {
+          return el.backdrop_path != null;
+        }).filter((el, index) => {
+          return index<12 
+        })
+        // console.log(temp)
+        return temp
+      })
+    })   
+  }, [])  
   
   return (
     <div className="trending015" style={{
