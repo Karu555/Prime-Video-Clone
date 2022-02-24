@@ -1,17 +1,23 @@
 .trending015{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
-  height: 20rem;
+  height: 40rem;
   display: flex;
   justify-content: space-between;
   align-items:flex-end;
 }
 .arrows015{
   box-sizing: border-box;
-  border: 1px solid red;  
+  /* border: 3px solid red;   */
   height: 100%;
-  width: 2.5%;
-  padding-top: 7.5%;
+  width: 4%;
+  padding-top: 15%;
+  color: white;
+}
+.arrows015:hover{
+  background-color: rgba(0, 0, 0, .1);  
+  transition: 1s;
+  cursor: pointer;
 }
 div.tracker015{
   /* border: 1px solid red;     */
@@ -20,14 +26,12 @@ div.tracker015{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 1%;
+  margin-bottom: -1.1%;
 
 }
 div.tracker015>.circles015{
-  border: 1px solid red;    
+  /* border: 1px solid red;     */
   width: 1.1rem;
   height: 1.1rem;
   border-radius: 50%;
-
-
 }

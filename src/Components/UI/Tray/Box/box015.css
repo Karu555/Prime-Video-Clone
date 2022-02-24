@@ -1,0 +1,66 @@
+.box015{
+  /* border: 1px solid red; */
+  width: 25rem;
+  height: 100%;  
+  display: inline-block;
+  /* text-align: center; */
+  margin:0 1%;
+  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  /* transition: all .5s ease;    */
+  transition: transform .2s;
+  /* background-color: red; */
+}
+.box015>img{
+  /* border: 2px solid red;   */
+}
+.box015>.hoverbox{
+  overflow: auto;
+  border: 2px solid #00A8E1;  
+  background-color: #1B2530;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+.box015>.hoverbox>.details>h4{
+  color:#00A8E1;
+}
+.box015>.hoverbox>.details>h3{
+  margin: 0;
+  padding: 0;
+}
+.box015>.hoverbox>.details>p{  
+  margin-top: 0;
+  text-align: justify; 
+  
+}
+.box015>.hoverbox>.details>.flexBox_bottom{  
+  display: flex;  
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.box015>.hoverbox>.details>.flexBox_bottom p{ 
+  margin: 0.2rem 1.3rem;
+} 
+.box015>.hoverbox>.details>.flexBox_bottom>p:nth-last-child(1){ 
+  border: 2px solid white;
+  padding: 0.3rem;
+  border-radius: 20%;
+}
+
+.box015:hover{
+  height: 25rem;  
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+
+
+.smallerbox015{
+  /* border: 1px solid red; */
+  width: 12rem;
+  height: 100%;  
+  display: inline-block;
+  text-align: center;
+  margin:0 0.5%;
+}
+

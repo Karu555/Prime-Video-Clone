@@ -1,12 +1,11 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Footer } from "../Footer/Footer.jsx";
-import { LanguagesPics } from "./Languagespics.jsx";
 import { Tray015 } from "../UI/Tray/Tray015.jsx"
 import { Trending015 } from "../UI/Trending/Trending015.jsx"
 
 
-export function MoviesPage015() {
+export function TVShowsPage015() {
   const [upcomingArray, setUpcomingArray] = useState([1]);   
   const [moviesArray, setMoviesArray] = useState([1]);   
   const [adventureArray, setadventureArray] = useState([1]);   
@@ -39,7 +38,7 @@ export function MoviesPage015() {
         return index<12
       })}/>
       <Tray015 title='Recommended Movies' smaller={false} givenarray={moviesArray}/>
-      <Tray015 title='Watch in your Language' smaller={true}  givenarray={LanguagesPics}/>
+      {/* <Tray015 title='Watch in your Language' smaller={true}  givenarray={LanguagesPics}/> */}
       <Tray015 title='Crime Movies' smaller={false} givenarray={crimeArray}/>
       <Tray015 title='Adventure Movies' smaller={false} givenarray={adventureArray}/>
       <Tray015 title='Animation Movies' smaller={false} givenarray={animationArray} />

@@ -5,7 +5,7 @@ import { MoviesPage015 } from './Components/MoviesPage/MoviesPage015';
 function App() {
   return (
     <div className="App">    
-      <MoviesPage015/>
+      <MoviesPage015 />      
     </div>
   );
 }
