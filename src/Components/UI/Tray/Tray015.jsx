@@ -54,11 +54,11 @@ export function Tray015(props) {
               {dummyArray.map((el, index) => {
                 let obj = givenarray[(index + start) % givenarray.length];
                 // if (obj == undefined) console.log('hi there');
-                return <Box015 type={ props.type}key={Date.now() * Math.random()} smaller={props.smaller}
-          // val={smaller?givenarray[(index + start)%givenarray.length]:`https://image.tmdb.org/t/p/w300${givenarray[(index + start)%givenarray.length].backdrop_path}`} />
-          val={ props.smaller? obj : `https://image.tmdb.org/t/p/w300${obj.backdrop_path}`}
-          // element={props.smaller? obj : obj}
-          element={obj}
+                return <Box015 type={props.type} key={Date.now() * Math.random()} smaller={props.smaller}
+                  // val={smaller?givenarray[(index + start)%givenarray.length]:`https://image.tmdb.org/t/p/w300${givenarray[(index + start)%givenarray.length].backdrop_path}`} />
+                  val={props.smaller ? obj : `https://image.tmdb.org/t/p/w300${obj.backdrop_path}`}
+                  // element={props.smaller? obj : obj}
+                  element={obj}
         />
       })}
         </div>

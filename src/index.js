@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MoviesPage015 } from './Components/MoviesPage/MoviesPage015';
 import { TVShowsPage015 } from './Components/TVShowsPage/TVShowsPage015';
+import { ItemLandingPage } from './ItemlandingPage/ItemLandingPage';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,9 @@ ReactDOM.render(
         <Route path='/' element={<App />}/>
         <Route path='/tvshows' element={<TVShowsPage015/>}/>
         <Route path='/movies' element={<MoviesPage015/>}/>
+        <Route path='/itemlanding' element={<ItemLandingPage />}>
+          <Route path=':itemid' element={<ItemLandingPage/>}/>          
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
