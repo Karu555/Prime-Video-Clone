@@ -29,31 +29,32 @@ export function HoverBox({ val, id, type,onCustomClick }) {
   
 
   return (
-    <div className='hoverbox' onClick={() => {
-      // console.log({
-      //   id: element.id,
-      //   type: type,
-      //   title: type == 'tv' ? element.original_name : element.original_title
-      // })
-      // console.log(element)
+    <div className='hoverbox' >      
+      {/* {console.log(element)} */}
+      <div style={{
+        cursor: 'pointer'
+      }} onClick={() => {
       onCustomClick({
           id: element.id,
           type: type,
           title: type == 'tv' ? element.original_name : element.original_title
         });
-      }}>      
-      {/* {console.log(element)} */}
+      }}>
       <Image src={val} alt="" width='100%' height='100%' />
+      </div>
       <div className='details'>
         <div className="flexBox">          
         <MdOutlinePlayCircle size={65}/>
           <h3>Play</h3>
           <div>
-            <IoPlayOutline size={35} />              
-              <AddToWishList/>
+            <IoPlayOutline size={35} />
+    {/*////////////// WISHLIST BUTTON ////////////////////////////// */}
+            <AddToWishList />
+    {/*////////////// WISHLIST BUTTON ////////////////////////////// */}            
           <MdBlock size={35}/>
           </div>
         </div>
+
         <h4>Included with Prime</h4>
         <h3>{type=='tv'?element.original_name:element.original_title}</h3>
         <p>{element.overview?element.overview:'No overview found!'}</p>  

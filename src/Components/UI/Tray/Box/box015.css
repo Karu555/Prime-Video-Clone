@@ -56,8 +56,7 @@ border: 1px solid red;
 
 .box015:hover {
   height: 25rem;
-  transform: scale(1.2);
-  cursor: pointer;
+  transform: scale(1.2);  
 }
 
 .image-container {
