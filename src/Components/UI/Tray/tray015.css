@@ -1,0 +1,37 @@
+.tray015{
+display: flex;
+/* border: 2px solid teal; */
+height: 15rem;
+margin: 2rem 0;
+padding-left:1rem ;
+}
+.traysub015{
+  /* border: 10px solid red;   */
+  /* border: 2px solid teal; */
+  overflow:visible;
+  display: flex;
+  /* white-space: nowrap; */
+  width: 100vw;
+}
+.tray015>.arrows015:nth-child(1){
+  /* border: 1px solid teal; */
+  background-color: rgba(0, 0, 0, 0);
+  position:absolute;
+  height: 28.5%;
+  padding-top: 5.5%;
+  z-index: 100;  
+}
+.tray015>.arrows015:nth-child(1):hover,.tray015>.arrows015:nth-child(3):hover{
+  background-color: rgba(0, 0, 0, .3);  
+  transition: 1s;
+  cursor:pointer;
+}
+.tray015>.arrows015:nth-child(3){
+  /* border: 10px solid teal; */
+  padding-top: 5.5%;
+  background-color: rgba(0, 0, 0, 0);  
+  position:absolute;
+  right: 0;
+  height: 28.5%;
+  z-index: 100; 
+} 

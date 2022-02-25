@@ -1,0 +1,18 @@
+.footer>h3 a{
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 1rem;  
+  text-decoration:none;
+  color: #90DFFE;  
+}
+.footer>h3 a:hover{
+  color: #60b3d4;  
+  transition: 1s;  
+}
+  .footer>h3{
+color: #7A8D9C;
+  }
+  .footer{
+height: 25rem;
+text-align: center;
+  }

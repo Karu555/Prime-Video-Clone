@@ -3,10 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { MoviesPage015 } from './Components/MoviesPage/MoviesPage015';
+import { TVShowsPage015 } from './Components/TVShowsPage/TVShowsPage015';
+import { ItemLandingPage } from './Components/ItemlandingPage/ItemLandingPage';
+import { Login } from './Components/Login';
+import { Register } from './Components/Register';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/tvshows' element={<TVShowsPage015/>}/>
+        <Route path='/movies' element={<MoviesPage015/>}/>
+        <Route path='/itemlanding' element={<ItemLandingPage />}>
+          <Route path=':itemid' element={<ItemLandingPage/>}/>          
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
