@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react'
 import './hoverbox015.css'
 import { SiPrime } from 'react-icons/si'
 import { Image } from './Image'
-import { PlayCircle } from '../../Buttons/PlayCircle/PlayCircle'
+import { PlayCircle } from '../../../Buttons/PlayCircle/PlayCircle'
+import { AddToWishList } from '../../../Buttons/Add2WishList/AddToWishList'
 export function HoverBox({ val, id, type,onCustomClick }) {
   const [element,setElement]=useState({})
   // console.log(element)
@@ -48,8 +49,8 @@ export function HoverBox({ val, id, type,onCustomClick }) {
         <MdOutlinePlayCircle size={65}/>
           <h3>Play</h3>
           <div>
-          <IoPlayOutline size={35} />  
-          <BsPlusLg size={35} />
+            <IoPlayOutline size={35} />              
+              <AddToWishList/>
           <MdBlock size={35}/>
           </div>
         </div>

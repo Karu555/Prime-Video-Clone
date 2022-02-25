@@ -11,6 +11,7 @@ export function TVShowsPage015() {
     <div style={{
       backgroundColor: '#0F171E',
       color: 'white',
+      overflow: 'hidden'
     }}>
        <Trending015 url1={'https://api.themoviedb.org/3/tv/on_the_air?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US&page=2'} />      
       <Tray015 type='tv' title='Popular TV shows' smaller={false} url1={`https://api.themoviedb.org/3/tv/popular?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US&page=3`}/>

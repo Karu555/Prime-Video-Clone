@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './box015.css'
-import { HoverBox } from './HoverBox015';
+import { HoverBox } from './HoverBox/HoverBox015';
 import {useNavigate} from 'react-router-dom'
-import { Image } from './Image';
+import { Image } from './HoverBox/Image';
 import { SiPrime } from 'react-icons/si';
 
 export function Box015({ val, smaller,element ,type}) {
@@ -26,15 +26,14 @@ export function Box015({ val, smaller,element ,type}) {
           // let dataobj=localStorage.getItem()
           navigate(`/itemlanding?id=${obj.id}&type=${obj.type}&title=${obj.title}`)
         }
-      } /> :smaller == false? <div className='image-container' style={{
-          'background-image': `url(${val})`
-      }}>
-          <div className='prime'>
-          <SiPrime size={30}/>
-          </div>
-        {/* <img src={val} alt="" width='100%' height='100%' /> */}
-      </div>:<img src={val} alt="" width='100%' height='100%' />}
-        {/* <Image src={val} alt="" width='100%' height='100%' /> */}
+      } /> : (smaller == false) ?
+        <div className='image-container' style={{
+          backgroundImage: `url(${val})`
+        }}>          
+          {!hoverVisible? <div className='prime'>
+            <SiPrime size={30} />
+          </div>:null}
+        </div> :<img src={val} alt="" width='100%' height='100%' />}
     </div>
   )
 }

@@ -11,9 +11,6 @@
   transition: transform 0.2s;
   /* background-color: red; */
 }
-.box015 > img {
-  /* border: 2px solid red;   */
-}
 /* .box015>.hoverbox{
   overflow: auto;
   border: 2px solid #00A8E1;  
@@ -70,19 +67,15 @@ border: 1px solid red;
 }
 
 .prime {
-  top: 0rem;
-  left: 0rem;
-  z-index: 100;
   width: 15%;
   padding: 0.3% 0;
   padding-left: 4%;
-  height: 11%;
+  height: 11.5%;
   border-top-right-radius: 1rem;
   border-top-left-radius: 0.3rem;
   border-bottom-right-radius: 1rem;
   color: black;
   background-color: #00a8e1;
-  /* box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px, rgba(0, 0, 0, 1) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px ; */
   box-shadow: 3.5px 6px 1px hsl(0deg 0% 0% / 1);
 }
 

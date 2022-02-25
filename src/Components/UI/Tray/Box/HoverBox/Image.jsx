@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SiPrime } from "react-icons/si";
-import { MessageBox } from "../../MessageBox/MessageBox";
+import { MessageBox } from "../../../MessageBox/MessageBox";
 import './primeIcon.css'
 
 export function Image({ src, width, height }) {

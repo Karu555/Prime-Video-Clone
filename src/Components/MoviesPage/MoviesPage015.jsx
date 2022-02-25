@@ -12,6 +12,7 @@ export function MoviesPage015() {
     <div style={{
       backgroundColor: '#0F171E',
       color: 'white',
+      overflow: 'hidden'
     }}>
       
       <Trending015 url1={'https://api.themoviedb.org/3/movie/upcoming?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US&page=1'} />      

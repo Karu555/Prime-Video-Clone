@@ -29,9 +29,9 @@ padding-left:1rem ;
 .tray015>.arrows015:nth-child(3){
   /* border: 10px solid teal; */
   padding-top: 5.5%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);  
   position:absolute;
   right: 0;
   height: 28.5%;
-  z-index: 100;  
+  z-index: 100; 
 } 

@@ -53,26 +53,26 @@ export function Tray015(props) {
         
             <div className="traysub015">
               {dummyArray.map((el, index) => {
-                let obj = givenarray[(index + start) % givenarray.length];
+                let obj =givenarray[(index + start)%givenarray.length];                
                 // if (obj == undefined) console.log('hi there');
                 return <Box015 type={props.type} key={Date.now() * Math.random()} smaller={props.smaller}
                   // val={smaller?givenarray[(index + start)%givenarray.length]:`https://image.tmdb.org/t/p/w300${givenarray[(index + start)%givenarray.length].backdrop_path}`} />
                   val={props.smaller ? obj : `https://image.tmdb.org/t/p/w300${obj.backdrop_path}`}
                   // element={props.smaller? obj : obj}
-                  element={obj}
-        />
+                  element={obj}/>
       })}
         </div>
         
             <div className="arrows015" style={
               {
-                color: (start == givenarray.length - (props.smaller ? 9 : 4)) ? 'transparent' : 'white',
-                color: dummyArray.length==6 && 'transparent'
+                color: dummyArray.length == 6 && props.smaller == true ? 'transparent' : 
+                  (start == (givenarray.length + 1) - (props.smaller ? 10 : 5)) ? 'transparent' : 'white',                
               }
             } onClick={() => {
           // setStart(p=>(p+1)%givenarray.length)
+              console.log(props.smaller, start,givenarray.length);
           if(start<=givenarray.length-(props.smaller?10:5))
-          setStart(p=>(p+1))
+                setStart(p => (p + 1))              
         }}><IoIosArrowForward size={70} /></div>
         
     </div>

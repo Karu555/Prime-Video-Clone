@@ -1,5 +1,5 @@
 .hoverbox{
-  overflow: auto;
+  overflow: hidden;
   border: 2px solid #00A8E1;  
   background-color: #1B2530;
   color: white;
@@ -10,7 +10,6 @@
 .hoverbox>.details{
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-
 }
 
 .hoverbox>.details>h4{
@@ -23,9 +22,16 @@
 }
 
 .hoverbox>.details>p{  
-  margin-top: 0;
+  margin-top: .5rem;
   text-align: justify; 
-  
+  line-height: 1.5rem;
+  height: 6rem;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;    
+  /* source:https://css-tricks.com/line-clampin/ */
 }
 
 .hoverbox>.details>.flexBox_bottom{  

@@ -1,6 +1,5 @@
 .messageBox{
   position: absolute;
-  z-index: 100;
   top: -6rem;
   left: -8rem;
   width: 110%;
@@ -8,6 +7,8 @@
   color: white;
   font-weight: 700;
   background-color: #252E39;
+  padding: 2% 0%;
+  box-sizing: border-box;
 }
 
 div.primeIc{
