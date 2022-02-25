@@ -46,7 +46,7 @@ export function Trending015({ url1 }) {
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100% 100%',
     }}>
-      {console.log(givenarray[current])}
+      {/* {console.log(givenarray[current])} */}
        <div div className="arrows015" style={{color:current==0?'transparent':'white'}} onClick={() => {
         setCurrent(p => {
           // if (p == 0) return givenarray.length - 1;

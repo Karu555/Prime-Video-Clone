@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import './hoverbox015.css'
 import { SiPrime } from 'react-icons/si'
 import { Image } from './Image'
+import { PlayCircle } from '../../Buttons/PlayCircle/PlayCircle'
 export function HoverBox({ val, id, type,onCustomClick }) {
   const [element,setElement]=useState({})
   // console.log(element)
@@ -16,6 +17,7 @@ export function HoverBox({ val, id, type,onCustomClick }) {
           setElement(res.data);
     })
   }, [])
+
   let hours = Math.floor(element.runtime / 60);
   let minutes = element.runtime - hours * 60
   let year;
@@ -27,18 +29,23 @@ export function HoverBox({ val, id, type,onCustomClick }) {
 
   return (
     <div className='hoverbox' onClick={() => {
+      // console.log({
+      //   id: element.id,
+      //   type: type,
+      //   title: type == 'tv' ? element.original_name : element.original_title
+      // })
+      // console.log(element)
       onCustomClick({
-        id: element.id,
-        type: type,
-        title: type == 'tv' ? element.original_name : element.original_title
-      });
-    }}>      
+          id: element.id,
+          type: type,
+          title: type == 'tv' ? element.original_name : element.original_title
+        });
+      }}>      
+      {/* {console.log(element)} */}
       <Image src={val} alt="" width='100%' height='100%' />
       <div className='details'>
-        <div className="flexBox">
-          <MdOutlinePlayCircle size={65} onClick={() => {
-            console.log('Clicked!!')
-          }}/> 
+        <div className="flexBox">          
+        <MdOutlinePlayCircle size={65}/>
           <h3>Play</h3>
           <div>
           <IoPlayOutline size={35} />  

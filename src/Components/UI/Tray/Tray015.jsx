@@ -34,6 +34,7 @@ export function Tray015(props) {
         }}>    
         {/* {console.log('123: ',props)} */}
       {console.log('inside tray')}
+      
       {/* {console.log(start)} */}
       <h1>{props.title}</h1>
       <div className="tray015">
