@@ -42,7 +42,7 @@ export function Trending015({ url1 }) {
   
   return (
     <div className="trending015" style={{
-      backgroundImage: `URL(https://image.tmdb.org/t/p/original${givenarray[current].backdrop_path})`,
+      backgroundImage: `url(https://image.tmdb.org/t/p/original${givenarray[current].backdrop_path})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100% 100%',
     }}>
