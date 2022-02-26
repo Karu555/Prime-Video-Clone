@@ -1,13 +1,15 @@
 import { MdOutlinePlayCircle } from "react-icons/md";
+import {useNavigate} from 'react-router-dom'
 
-export function PlayCircle() {
+export function PlayCircle({type,id}) {
+  const navigate = useNavigate();
   return (
-    <div>
+    <span>
       <MdOutlinePlayCircle size={65} onClick={ 
         () => {
-          console.log('Clicked!')
+          navigate(`/watchmoviepage?id=${id}&type=${type}`)
         }
       }/>     
-    </div>
+    </span>
   )
 }

@@ -44,8 +44,9 @@ export function HoverBox({ val, id, type,onCustomClick,plusVisible, sendWatchLis
       <Image src={val} alt="" width='100%' height='100%' />
       </div>
       <div className='details'>
-        <div className="flexBox">          
-        <MdOutlinePlayCircle size={65}/>
+        <div className="flexBox">       
+          <PlayCircle id={id} type={type}/>  
+        {/* <MdOutlinePlayCircle size={65}/> */}
           <h3>Play</h3>
           <div>
             <IoPlayOutline size={35} />
