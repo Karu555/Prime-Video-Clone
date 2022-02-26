@@ -6,7 +6,11 @@ import './primeIcon.css'
 export function Image({ src, width, height }) {
   const [messageVisible,setMessageVisible]=useState(false)
   return (
-    <div>
+    <div style={{
+      backgroundImage: `url(${src})`,
+      height: '15rem',
+      backgroundSize:'cover'
+    }}>
       <div className="primeIcon" onMouseOver={
         () => {
           setMessageVisible(true)
@@ -16,11 +20,11 @@ export function Image({ src, width, height }) {
           setMessageVisible(false)
         }
       }>
-        <SiPrime size={28}/>
+        <SiPrime size={30}/>
       </div>
     
-      {(messageVisible&&<MessageBox/>)}
-      <img src={src} alt="" width={width} height={height} />
+      {(messageVisible&&<MessageBox  top= '-6rem' left= '-8rem' width= '110%'  height= '20%'/>)}
+      {/* <img src={src} alt="" width={width} height={height} /> */}
     </div>
   )
 }

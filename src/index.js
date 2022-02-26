@@ -9,6 +9,7 @@ import { TVShowsPage015 } from './Components/TVShowsPage/TVShowsPage015';
 import { ItemLandingPage } from './Components/ItemlandingPage/ItemLandingPage';
 import { Login } from './Components/Login';
 import { Register } from './Components/Register';
+import { Trailer015 } from './Components/Trailer/Trailer';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
         <Route path='/register' element={<Register/>}/>
         <Route path='/tvshows' element={<TVShowsPage015/>}/>
         <Route path='/movies' element={<MoviesPage015/>}/>
+        <Route path='/watchmoviepage' element={<Trailer015/>}/>
         <Route path='/itemlanding' element={<ItemLandingPage />}>
           <Route path=':itemid' element={<ItemLandingPage/>}/>          
         </Route>

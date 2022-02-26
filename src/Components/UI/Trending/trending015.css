@@ -1,7 +1,7 @@
 .trending015{
   /* border: 1px solid red; */
   width: 100%;
-  height: 38rem;
+  height: 30rem;
   display: flex;
   justify-content: space-between;
   align-items:flex-end;
@@ -11,7 +11,7 @@
   /* border: 3px solid red;   */
   height: 100%;
   width: 4%;
-  padding-top: 15%;
+  padding-top: 10%;
   color: white;
 }
 .arrows015:hover{

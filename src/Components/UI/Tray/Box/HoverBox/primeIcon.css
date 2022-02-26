@@ -1,9 +1,10 @@
 div.primeIcon{
   position: absolute;
+  z-index: 1;
   top: 0rem;
   left: 0rem;
   width:20% ;
-  height: 7%;
+  height: 1.8rem;
   border-top-right-radius: 1rem;
   border-top-left-radius: .3rem;
   border-bottom-right-radius: 1rem;

@@ -7,9 +7,9 @@ import './hoverbox015.css'
 import { SiPrime } from 'react-icons/si'
 import { Image } from './Image'
 import { PlayCircle } from '../../../Buttons/PlayCircle/PlayCircle'
-import { AddToWishList } from '../../../Buttons/Add2WishList/AddToWishList'
-export function HoverBox({ val, id, type,onCustomClick }) {
-  const [element,setElement]=useState({})
+import { AddToWatchList, AddToWishList } from '../../../Buttons/Add2WatchList/AddToWatchList'
+export function HoverBox({ val, id, type,onCustomClick,plusVisible, sendWatchListtoDB }) {
+  const [element, setElement] = useState({})
   // console.log(element)
   useEffect(() => {
     axios.get(
@@ -18,6 +18,7 @@ export function HoverBox({ val, id, type,onCustomClick }) {
           setElement(res.data);
     })
   }, [])
+
 
   let hours = Math.floor(element.runtime / 60);
   let minutes = element.runtime - hours * 60
@@ -32,7 +33,7 @@ export function HoverBox({ val, id, type,onCustomClick }) {
     <div className='hoverbox' >      
       {/* {console.log(element)} */}
       <div style={{
-        cursor: 'pointer'
+        cursor: 'pointer',
       }} onClick={() => {
       onCustomClick({
           id: element.id,
@@ -43,13 +44,14 @@ export function HoverBox({ val, id, type,onCustomClick }) {
       <Image src={val} alt="" width='100%' height='100%' />
       </div>
       <div className='details'>
-        <div className="flexBox">          
-        <MdOutlinePlayCircle size={65}/>
+        <div className="flexBox">       
+          <PlayCircle id={id} type={type}/>  
+        {/* <MdOutlinePlayCircle size={65}/> */}
           <h3>Play</h3>
           <div>
             <IoPlayOutline size={35} />
     {/*////////////// WISHLIST BUTTON ////////////////////////////// */}
-            <AddToWishList />
+            <AddToWatchList plusVisible={plusVisible} sendWatchListtoDB={sendWatchListtoDB} id={element.id} type={type}/>
     {/*////////////// WISHLIST BUTTON ////////////////////////////// */}            
           <MdBlock size={35}/>
           </div>
