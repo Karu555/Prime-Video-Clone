@@ -8,6 +8,7 @@ import shortstv from "./images/ShortsTV-426X2944_V1.jpg";
 import mubi from "./images/Mubi-426X2946_V1.jpg";
 import manorama from "./images/426x294_MANORAMAMAX.jpg";
 import hayu from "./images/Hayu_logo_for_MLP_Grid.jpg";
+//import bigimg from "./images/bigimg.jpg";
 import bigimg from "./images/bigimg.jpg";
 import prime from "./images/PRIME_multi-benefit_MAGNET_2X._SX1440_CR575,0,865,675_QL80_AC_FP_.jpg";
 import mpltemplate from "./images/MLP_Template_Image_Left._SX1440_CR0,0,865,675_QL80_AC_FP_.jpg";
