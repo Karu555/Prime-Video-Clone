@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MoviesPage015 } from './Components/MoviesPage/MoviesPage015';
 import { TVShowsPage015 } from './Components/TVShowsPage/TVShowsPage015';
-import { ItemLandingPage } from './Components/ItemlandingPage/ItemLandingPage';
+import { ItemLandingPage015 } from './Components/ItemlandingPage/ItemLandingPage015';
 import { Login } from './Components/Login';
 import { Register } from './Components/Register';
 import { Trailer015 } from './Components/Trailer/Trailer';
@@ -22,8 +22,8 @@ ReactDOM.render(
         <Route path='/tvshows' element={<TVShowsPage015/>}/>
         <Route path='/movies' element={<MoviesPage015/>}/>
         <Route path='/watchmoviepage' element={<Trailer015/>}/>
-        <Route path='/itemlanding' element={<ItemLandingPage />}>
-          <Route path=':itemid' element={<ItemLandingPage/>}/>          
+        <Route path='/itemlanding' element={<ItemLandingPage015 />}>
+          <Route path=':itemid' element={<ItemLandingPage015/>}/>          
         </Route>
       </Routes>
     </BrowserRouter>
