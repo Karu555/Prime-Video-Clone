@@ -25,7 +25,13 @@ const navigate=useNavigate()
       if (error.response) {
         console.log(error.response.status);
         console.log(error.response.data);
-        setError(error.response.data);
+        let err = error.response.data;
+          if (typeof error.response.data == 'string') {
+            err = [{
+              msg: error.response.data
+            }]
+          }
+        setError(err);
       }
     })
   }
