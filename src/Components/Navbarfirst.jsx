@@ -1,5 +1,7 @@
 import navbarimg from "./images/web_footer_logo._CB462908456_.png";
-import globeimg from "./images/globe.png";
+
+import { FaGlobe } from "react-icons/fa";
+
 export const Navbarfirst = () => {
   return (
     <div className="navbardiv">
@@ -13,11 +15,26 @@ export const Navbarfirst = () => {
           boxSizing: "border-box",
         }}
       >
-        <span className="globediv">
-          <img src={globeimg}></img>
-        </span>
-        <span style={{ color: "white", marginRight: "30px" }}>EN</span>{" "}
-        <span style={{ color: "white" }}>Sign In</span>
+        <span
+          style={{ color: "white", marginRight: "30px", lineHeight: "30px" }}
+        >
+          <FaGlobe
+            style={{
+              width: "22px",
+              height: "22px",
+              lineHeight: "40px",
+            }}
+          />
+          <span
+            style={{
+              fontSize: "20px",
+            }}
+          >
+            {" "}
+            EN
+          </span>
+        </span>{" "}
+        <span style={{ color: "white", fontSize: "20px" }}>Sign In</span>
       </div>
     </div>
   );
