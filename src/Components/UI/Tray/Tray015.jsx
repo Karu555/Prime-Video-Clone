@@ -52,15 +52,14 @@ export function Tray015(props) {
         }}><IoIosArrowBack size={70}/></div>
         
             <div className="traysub015">
+              
               {dummyArray.map((el, index) => {
-                let obj =givenarray[(index + start)%givenarray.length];                
-                // if (obj == undefined) console.log('hi there');
+                let obj =givenarray[(index + start)%givenarray.length];  
                 return <Box015 type={props.type} key={Date.now() * Math.random()} smaller={props.smaller}
-                  // val={smaller?givenarray[(index + start)%givenarray.length]:`https://image.tmdb.org/t/p/w300${givenarray[(index + start)%givenarray.length].backdrop_path}`} />
                   val={props.smaller ? obj : `https://image.tmdb.org/t/p/w300${obj.backdrop_path}`}
-                  // element={props.smaller? obj : obj}
                   element={obj}/>
       })}
+             
         </div>
         
             <div className="arrows015" style={
