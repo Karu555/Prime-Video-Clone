@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Firsthome} from './Components/Firsthome'
+// import { Firsthome} from './Components/Firsthome'
+// import { LandingPage015 } from './Components/LandingPage/LandingPage015';
+import {LandingPage015} from './Components/LandingPage/LandingPage015'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MoviesPage015 } from './Components/MoviesPage/MoviesPage015';
 import { TVShowsPage015 } from './Components/TVShowsPage/TVShowsPage015';
 import { ItemLandingPage015 } from './Components/ItemlandingPage/ItemLandingPage015';
-import { Login } from './Components/Login';
-import { Register } from './Components/Register';
+// import { Login } from './Components/Login';
+// import { Register } from './Components/Register';
 import { Trailer015 } from './Components/Trailer/Trailer';
 import Signup from './Components/SignUp';
 import SignIn from './Components/SignIn';
@@ -18,8 +20,8 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>        
-      <Route path='/' element={<Firsthome/>}/>
-        <Route path='/home' element={<App />}/>
+        <Route path='/' element={<App />}/>
+      <Route path='/home' element={<LandingPage015/>}/>
         <Route path='/login' element={<SignIn/>}/>
         <Route path='/register' element={<Signup/>}/>
         <Route path='/tvshows' element={<TVShowsPage015/>}/>
