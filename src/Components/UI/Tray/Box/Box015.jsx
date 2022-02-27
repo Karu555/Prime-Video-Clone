@@ -19,6 +19,7 @@ export function Box015({ val, smaller,element ,type}) {
       id,
       type
     }
+    
     ///////TOKEN GAINED AFTER LOGIN///////
     let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMThjMDJkY2UxMzhkNWJiOTRhODVlMSIsIm5hbWUiOiJSdXNoaSIsImVtYWlsIjoiUnVzaGlAUnVzaGkuY29tIiwicGFzc3dvcmQiOiIkMmEkMDgkOHlFaml4aTlmaExEdWhvLzJqZUVVT1IyWElpcWxFUnNnS3hNdmloeDd3YWpROTZURm5IbkMiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTI1VDExOjQwOjI5LjI3MFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAyLTI1VDExOjQwOjI5LjI3MFoifSwiaWF0IjoxNjQ1Nzg5MjUxfQ.E56TZSepI1BrCzTPb3drWz28yvumpX2tRVEeag156ew';
     ///////TOKEN GAINED AFTER LOGIN///////

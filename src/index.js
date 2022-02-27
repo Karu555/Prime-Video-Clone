@@ -17,8 +17,7 @@ import SignIn from './Components/SignIn';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        
+      <Routes>        
       <Route path='/' element={<Firsthome/>}/>
         <Route path='/home' element={<App />}/>
         <Route path='/login' element={<SignIn/>}/>

@@ -6,6 +6,7 @@ import {useSearchParams } from 'react-router-dom'
 import { Footer } from "../Footer/Footer015";
 import './itemlandingpage015.css'
 import '../Footer/footer.css'
+import { ItemLandingControls } from "../UI/Buttons/ItemlandingControls";
   
 export function ItemLandingPage015() {
   let [searchParams] = useSearchParams();
@@ -27,31 +28,48 @@ export function ItemLandingPage015() {
       `https://api.themoviedb.org/3/${searchParams.get('type')}/${searchParams.get('id')}/credits?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US`).then(res => {        
         setCast(res.data);
       })
-    }, [])
+  }, [])
+  
   let hours = Math.floor(item?.runtime / 60);
   let minutes = item?.runtime-hours*60;
   let year = item?.release_date?.trim().split('-')[0];
-console.log(item)
+  console.log(item)
   let url = 'https://image.tmdb.org/t/p/original' + item?.backdrop_path;
   return (
     <div style={{
       backgroundColor: '#0F171E',
-      color: 'white',      
+      color: 'white',
     }}>
-    <div className="itemLandingpage" style={
-        {
+    <div className="itemLandingpage">
+        <div style={
+          {         
+            position: "absolute",
+            zIndex: -10,
+            border: '3px solid red',
+            marginLeft:'30%',
+            width: '70%',
+            height: '97%',
           backgroundImage: `url(${url})`,
-          backgroundSize:'cover'
-      }
-    }>
-        <h1>{item.id}</h1>
+          backgroundSize:'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPositionX: '99%',
+          'box-shadow': '0 0 50px 50px #0F171E inset'
+        }
+    }></div>
+        <h1>{item.title}</h1>
         <div className="item-meta">
           <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tmdb.new.logo.svg/1280px-Tmdb.new.logo.svg.png" alt=""  width='100%' height='100%'/></div>
           <div>{ item?.vote_average}</div>
           <div>{hours}h{ minutes}min</div>
           <div>{year}</div>
         </div>
-        <div className="flexbox-control-buttons"></div>
+        <div className="flexbox-control-buttons">
+          <div className="playBig">Play</div>  
+          <ItemLandingControls/>
+          <ItemLandingControls/>
+          <ItemLandingControls/>
+          <ItemLandingControls/>
+        </div>
         <div className="itemdesc">
           {item?.overview}
         </div>

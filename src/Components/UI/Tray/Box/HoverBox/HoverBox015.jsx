@@ -7,7 +7,7 @@ import './hoverbox015.css'
 import { SiPrime } from 'react-icons/si'
 import { Image } from './Image'
 import { PlayCircle } from '../../../Buttons/PlayCircle/PlayCircle'
-import { AddToWatchList, AddToWishList } from '../../../Buttons/Add2WatchList/AddToWatchList'
+import { AddToWatchList } from '../../../Buttons/Add2WatchList/AddToWatchList'
 export function HoverBox({ val, id, type,onCustomClick,plusVisible, sendWatchListtoDB }) {
   const [element, setElement] = useState({})
   // console.log(element)
