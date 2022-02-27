@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Firsthome} from './Components/Firsthome'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MoviesPage015 } from './Components/MoviesPage/MoviesPage015';
 import { TVShowsPage015 } from './Components/TVShowsPage/TVShowsPage015';
@@ -15,7 +16,8 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App />}/>
+        <Route path='/' element={<Firsthome/>}/>
+        <Route path='/home' element={<App />}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/tvshows' element={<TVShowsPage015/>}/>

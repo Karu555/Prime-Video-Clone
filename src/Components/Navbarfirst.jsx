@@ -1,6 +1,7 @@
 import navbarimg from "./images/web_footer_logo._CB462908456_.png";
 
 import { FaGlobe } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Navbarfirst = () => {
   return (
@@ -34,7 +35,7 @@ export const Navbarfirst = () => {
             EN
           </span>
         </span>{" "}
-        <span style={{ color: "white", fontSize: "20px" }}>Sign In</span>
+        <Link to="/login" target='_blank' style={{textDecorationLine:'none', color: "white", fontSize: "20px" }}>Sign In</Link>        
       </div>
     </div>
   );

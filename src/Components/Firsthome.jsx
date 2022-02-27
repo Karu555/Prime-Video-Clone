@@ -13,6 +13,7 @@ import bigimg from "./images/bigimg.jpg";
 import prime from "./images/PRIME_multi-benefit_MAGNET_2X._SX1440_CR575,0,865,675_QL80_AC_FP_.jpg";
 import mpltemplate from "./images/MLP_Template_Image_Left._SX1440_CR0,0,865,675_QL80_AC_FP_.jpg";
 import inkids from "./images/IN-kids-30Jan._SX1440_CR575,0,865,675_QL80_AC_FP_.jpg";
+import { Link } from "react-router-dom";
 export const Firsthome = () => {
   return (
     <div>
@@ -25,7 +26,9 @@ export const Firsthome = () => {
               Join Prime to watch the latest movies, TV shows and award-winning
               Amazon Originals
             </p>
-            <button
+            {/* <Link to="/login" target='_blank' style={{textDecorationLine:'none', color: "white", fontSize: "20px" }}>Sign In</Link>         */}
+            
+            <button              
               style={{
                 marginLeft: "65px",
                 fontSize: "18px",
@@ -36,9 +39,14 @@ export const Firsthome = () => {
                 height: "50px",
                 borderRadius: "5px",
                 border: "0px",
+                
               }}
             >
-              Start Trials
+              <Link to="/login" target='_blank' style={{
+                textDecorationLine:'none', color: "white", fontSize: "20px"
+              }}>
+                Start Trials
+              </Link>
             </button>
             <p style={{ marginLeft: "85px" }}>
               With select credit or debit cards
@@ -113,7 +121,11 @@ export const Firsthome = () => {
               border: "0px",
             }}
           >
-            Get Started
+            <Link to="/login" target='_blank' style={{
+                textDecorationLine:'none', color: "white", fontSize: "20px"
+              }}>
+              Get Started
+            </Link>
           </button>
         </div>
         <div>
@@ -148,7 +160,11 @@ export const Firsthome = () => {
                 border: "0px",
               }}
             >
-              Get Started
+              <Link to="/login" target='_blank' style={{
+                textDecorationLine:'none', color: "white", fontSize: "20px"
+              }}>              
+                Get Started
+                </Link>
             </button>
           </div>
         </div>
@@ -176,7 +192,11 @@ export const Firsthome = () => {
               border: "0px",
             }}
           >
-            Get Started
+              <Link to="/login" target='_blank' style={{
+                textDecorationLine:'none', color: "white", fontSize: "20px"
+              }}>
+              Get Started
+              </Link>
           </button>
         </div>
 
