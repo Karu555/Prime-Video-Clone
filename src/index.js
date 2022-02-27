@@ -15,6 +15,7 @@ import { ItemLandingPage015 } from './Components/ItemlandingPage/ItemLandingPage
 import { Trailer015 } from './Components/Trailer/Trailer';
 import Signup from './Components/SignUp';
 import SignIn from './Components/SignIn';
+import { WatchList } from './Components/WatchList/WatchList';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -30,6 +31,7 @@ ReactDOM.render(
         <Route path='/itemlanding' element={<ItemLandingPage015 />}>
           <Route path=':itemid' element={<ItemLandingPage015/>}/>          
         </Route>
+        <Route path='/watchlist' element={<WatchList/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

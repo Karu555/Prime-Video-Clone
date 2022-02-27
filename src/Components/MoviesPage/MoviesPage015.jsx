@@ -4,11 +4,14 @@ import { Footer } from "../Footer/Footer015.jsx";
 import { LanguagesPics } from "./Languagespics.jsx";
 import { Tray015 } from "../UI/Tray/Tray015.jsx"
 import { Trending015 } from "../UI/Trending/Trending015.jsx"
+import { Navbar } from "../Navbar/Navbar.jsx";
 
 
 export function MoviesPage015() {
 
   return (
+    <>
+      <Navbar/>
     <div style={{
       backgroundColor: '#0F171E',
       color: 'white',
@@ -23,5 +26,6 @@ export function MoviesPage015() {
       <Tray015 type='movie' title='Animation Movies' smaller={false} url1='https://api.themoviedb.org/3/discover/movie?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US&sort_by=popularity.desc&include_adult=false&with_genres=16'/>
       <Footer/>    
     </div>
+      </>
   )
 }

@@ -4,39 +4,19 @@ import { LanguagesPics } from "./Languagespics.jsx";
 import { Tray015 } from "../UI/Tray/Tray015"
 import { Trending015 } from "../UI/Trending/Trending015.jsx"
 import {Link} from 'react-router-dom'
+import { Navbar } from '../Navbar/Navbar'
+
 
 export function LandingPage015() {
   
   return (
-
+    <>
+    <Navbar/>
     <div style={{
       backgroundColor: '#0F171E',
       color: 'white',
       overflow: "hidden"
     }}>
-      <div>
-        <Link to="/movies" target='_blank' style={{
-          color: 'white',
-          fontSize: '1.5rem',
-          margin: '1rem'
-        }}>Movies</Link>
-        <Link to="/tvshows" target='_blank' style={{
-          color: 'white',
-          fontSize: '1.5rem',
-          margin: '1rem'
-        }}>Tv Shows</Link>
-        <Link to="/login" target='_blank' style={{
-          color: 'white',
-          fontSize: '1.5rem',
-          margin: '1rem'
-        }}>Login</Link>
-        <Link to="/register" target='_blank' style={{
-          color: 'white',
-          fontSize: '1.5rem',
-          margin: '1rem'
-        }}>Register</Link>
-
-      </div>
       <Trending015 url1={'https://api.themoviedb.org/3/movie/upcoming?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US&page=3'} />      
       <Tray015 type='movie' title='Recommended Movies' smaller={false} url1={`https://api.themoviedb.org/3/discover/movie?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US&sort_by=popularity.desc&include_adult=false`} />
       <Tray015 type='tv' title='Popular TV shows' smaller={false} url1={`https://api.themoviedb.org/3/tv/popular?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US&page=3`}/>
@@ -51,5 +31,6 @@ export function LandingPage015() {
       
       <Footer/>    
     </div>
+        </>
   )
 }

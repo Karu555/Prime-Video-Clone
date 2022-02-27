@@ -1,5 +1,6 @@
 
 import { Footer } from "../Footer/Footer015.jsx";
+import { Navbar } from "../Navbar/Navbar.jsx";
 import { Tray015 } from "../UI/Tray/Tray015.jsx"
 import { Trending015 } from "../UI/Trending/Trending015.jsx"
 import { tvGenrePics } from "./tvGenrePics.jsx";
@@ -8,6 +9,8 @@ import { tvGenrePics } from "./tvGenrePics.jsx";
 export function TVShowsPage015() {
   
   return (
+    <>
+      <Navbar/>
     <div style={{
       backgroundColor: '#0F171E',
       color: 'white',
@@ -27,5 +30,6 @@ export function TVShowsPage015() {
         url1='https://api.themoviedb.org/3/discover/tv?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0&with_genres=35' />
       <Footer/>    
     </div>
+      </>
   )
 }
