@@ -3,18 +3,22 @@ import {IoPlayOutline} from 'react-icons/io5'
 import {BsPlusLg} from 'react-icons/bs'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './hoverbox015.css'
 import { SiPrime } from 'react-icons/si'
 import { Image } from './Image'
 import { PlayCircle } from '../../../Buttons/PlayCircle/PlayCircle'
 import { AddToWatchList } from '../../../Buttons/Add2WatchList/AddToWatchList'
+import { Link } from 'react-router-dom'
+
 export function HoverBox({ val, id, type,onCustomClick,plusVisible, sendWatchListtoDB }) {
+  const nav = useNavigate();
   const [element, setElement] = useState({})
   // console.log(element)
   useEffect(() => {
     axios.get(
       // `https://api.themoviedb.org/3/tv/2051?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US`
-      `https://api.themoviedb.org/3/${type}/${id}?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US`).then(res => {
+      `https://api.themoviedb.org/3/${type}/${id}?api_key=dfdce3f4e2798c999d2088421ef5be60&language=en-US&append_to_response=videos`).then(res => {
           setElement(res.data);
     })
   }, [])
@@ -44,10 +48,14 @@ export function HoverBox({ val, id, type,onCustomClick,plusVisible, sendWatchLis
       <Image src={val} alt="" width='100%' height='100%' />
       </div>
       <div className='details'>
-        <div className="flexBox">       
-          <PlayCircle id={id} type={type}/>  
-        {/* <MdOutlinePlayCircle size={65}/> */}
-          <h3>Play</h3>
+        <div className="flexBox">             
+          <div onClick={() => {
+            nav(`/watchmoviepage?key=${element?.videos?.results[0].key}`)            
+          }}>
+            <PlayCircle id={id} type={type}/>  
+          {/* <MdOutlinePlayCircle size={65}/> */}
+            <h3>Play</h3>          
+            </div>  
           <div>
             <IoPlayOutline size={35} />
     {/*////////////// WISHLIST BUTTON ////////////////////////////// */}

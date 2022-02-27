@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Navbar } from "../Navbar/Navbar";
 import { Footer } from "../Footer/Footer015";
 import "./watchlist2.css"
@@ -6,6 +6,8 @@ import "./watchlist2.css"
 
 
 export function WatchList() {
+
+
 
   return (
     <div className="watchlist-main">

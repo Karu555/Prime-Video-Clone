@@ -11,7 +11,6 @@ export function Box015({ val, smaller,element ,type}) {
   const [plusVisible, setPlusVisible] = useState(true)
 
   const navigate = useNavigate();
-
   
   function sendWatchListtoDB(id, type) {
     // if(id=='flip' && type=='flip') setPlusVisible(true)
