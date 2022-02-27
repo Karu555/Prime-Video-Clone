@@ -1,0 +1,19 @@
+.item-landing-buttons{
+  width: 3.8rem;  
+  height: 3.8rem;
+  border-radius: 50%;
+  background-color: #566B84;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2.5%;
+  box-sizing: border-box; */
+}
+.item-landing-buttons>a{
+  padding: 2.5%;  
+}
+.item-landing-buttons:hover{
+  background-color: #949daa;
+  transition: .8s;
+}

@@ -12,7 +12,7 @@ import { TVShowsPage015 } from './Components/TVShowsPage/TVShowsPage015';
 import { ItemLandingPage015 } from './Components/ItemlandingPage/ItemLandingPage015';
 // import { Login } from './Components/Login';
 // import { Register } from './Components/Register';
-import { Trailer015 } from './Components/Trailer/Trailer';
+import { Trailer015 } from './Components/Trailer/Trailer015';
 import Signup from './Components/SignUp';
 import SignIn from './Components/SignIn';
 import { WatchList } from './Components/WatchList/WatchList';
@@ -27,7 +27,9 @@ ReactDOM.render(
         <Route path='/register' element={<Signup/>}/>
         <Route path='/tvshows' element={<TVShowsPage015/>}/>
         <Route path='/movies' element={<MoviesPage015/>}/>
-        <Route path='/watchmoviepage' element={<Trailer015/>}/>
+        <Route path='/watchmoviepage' element={<Trailer015 />}>
+          <Route path=':movieid' element={<Trailer015 />}/>          
+        </Route>
         <Route path='/itemlanding' element={<ItemLandingPage015 />}>
           <Route path=':itemid' element={<ItemLandingPage015/>}/>          
         </Route>
