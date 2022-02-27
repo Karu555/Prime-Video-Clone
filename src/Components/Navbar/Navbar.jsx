@@ -3,13 +3,21 @@ import { FaSearch } from "react-icons/fa";
 import { AiFillCaretDown } from "react-icons/ai";
 import {Link} from 'react-router-dom'
 import "./Navbar.css"
+import { useNavigate } from "react-router-dom";
+import SignIn from "../SignIn";
 
 
 export const Navbar = () => {
+  const nav = useNavigate();
   const [show,setShow] = useState(false);
   const [showlogin, setShowlogin] = useState(false)
 
-  
+  let user = JSON.parse(localStorage.getItem('user'));
+  console.log(user)
+  if (!user) {    
+    nav(`\login`)
+    return <SignIn/>
+  };  
 
     return (
       <div className="parent_div">
@@ -126,7 +134,10 @@ export const Navbar = () => {
           </div>
           <div className="User_name">
               {/* <span><img src="https://www.seekpng.com/png/full/115-1150456_avatar-generic-avatar.png" alt="" className="user_icon"/></span> */}
-              <span className="LogIn" onClick={() => setShowlogin((e) => !e)} >User Name</span>
+            <span className="LogIn" onClick={() => setShowlogin((e) => !e)} >
+              
+              {user.name}
+            </span>
               <div className="login_div" style={{ display: showlogin ? "flex" : "none" }}>
                   <div className="login_list1">
                       
@@ -134,7 +145,12 @@ export const Navbar = () => {
                           <p>Account & setting</p>
                           <p>watch Anywhere</p>
                           <p>Help</p>
-                          <p>Not yourName? Sign Out</p>
+                <p onClick={() => {
+                  localStorage.setItem('user', null);
+                  nav(`/login`)
+                }}>                  
+                  Not {user.name}? Sign Out
+                </p>
                       
                   </div>
                   <div>

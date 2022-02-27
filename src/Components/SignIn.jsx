@@ -19,7 +19,12 @@ const navigate=useNavigate()
     }
     // console.log('here')
     axios.post('http://localhost:8000/login', user).then((res) => {      
-      console.log(res.data) 
+      console.log(res.data.token) 
+      let userObj = {
+        name: res.data.user.name,
+        token:res.data.token
+      }
+      localStorage.setItem('user', JSON.stringify(userObj));      
       navigate('/home')        
     }).catch((error) => {
       if (error.response) {
@@ -38,7 +43,7 @@ const navigate=useNavigate()
   return (
     <>
     <div className='primevideoIcon'>
-    <SiPrimevideo size={200}/>
+    <SiPrimevideo size={170}/>
     </div>
       {errors.length>0&&<div className="errorbox">
       <h2>There was a problem</h2>

@@ -7,6 +7,7 @@ import { Footer } from "../Footer/Footer015";
 import './itemlandingpage015.css'
 import '../Footer/footer.css'
 import { ItemLandingControls } from "../UI/Buttons/ItemlandingControls";
+import { Navbar } from '../Navbar/Navbar';
   
 export function ItemLandingPage015() {
   let [searchParams] = useSearchParams();
@@ -35,7 +36,10 @@ export function ItemLandingPage015() {
   let year = item?.release_date?.trim().split('-')[0];
   console.log(item)
   let url = 'https://image.tmdb.org/t/p/original' + item?.backdrop_path;
+
   return (
+    <>
+      <Navbar/>
     <div style={{
       backgroundColor: '#0F171E',
       color: 'white',
@@ -97,5 +101,6 @@ export function ItemLandingPage015() {
       </div>
       <Footer/>
     </div>
+          </>
   )
 }
