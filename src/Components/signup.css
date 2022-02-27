@@ -115,3 +115,28 @@ section{
     padding: 10px 35px;
     letter-spacing: .5px;
 }
+
+.errorbox{
+  font-size: 1rem;
+  text-align: center;
+  width: 18%;
+  margin:1rem auto;
+  color: red;  
+  border:2px solid orangered ;
+}
+.errorbox ul{
+  color: black;
+  text-align: center; 
+  width: 70%;
+  margin: auto;
+  padding-bottom: 1rem;   
+}
+.errorbox ul li{
+  text-align: left;  
+}
+
+
+
+.primevideoIcon{
+  text-align: center;
+}

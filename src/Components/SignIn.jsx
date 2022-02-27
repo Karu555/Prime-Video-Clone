@@ -1,46 +1,85 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+import React, { useState } from 'react'
+import { SiPrimevideo } from 'react-icons/si';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 const SignIn = () => {
-
-   
-
-    return (
+const navigate=useNavigate()
+   const [email,setEmail]=useState('')
+  const [password, setPassword] = useState('')
+  const [errors, setError] = useState('')
+  
+  function handleLoginSubmit(email, password) {
+    let user = {
+      email,password
+    }
+    // console.log('here')
+    axios.post('http://localhost:8000/login', user).then((res) => {      
+      console.log(res.data) 
+      navigate('/home')        
+    }).catch((error) => {
+      if (error.response) {
+        console.log(error.response.status);
+        console.log(error.response.data);
+        setError(error.response.data);
+      }
+    })
+  }
+  return (
+    <>
+    <div className='primevideoIcon'>
+    <SiPrimevideo size={200}/>
+    </div>
+      {errors.length>0&&<div className="errorbox">
+      <h2>There was a problem</h2>
+      <ul>
+      {errors.map(e => {
+        return <li>{ e.msg}</li>
+      })}          
+      </ul>
+      </div>}
         <section>
             <div className="sign_container">
                 <div className="sign_header">
-                    <img src="./blacklogoamazon.png" alt="signupimg" />
+                    {/* <img src="./blacklogoamazon.png" alt="signupimg" /> */}
                 </div>
                 <div className="sign_form">
-                    <form method="POST">
+                    <form>
                         <h1>Sign-In</h1>
 
                         <div className="form_data">
                             <label htmlFor="email">Email or mobile phone number</label>
-                            <input type="email" name="email"
+                <input type="email" name="email"
+                  onChange={(e)=>setEmail(e.target.value)}                  
                             
                                 id="email" />
                         </div>
                         <div className="form_data">
                             <label htmlFor="password">Password</label>
                             <input type="password" name="password"
-                                
+                                onChange={(e)=>setPassword(e.target.value)}
                                 id="password" placeholder="At least 6 characters" />
                         </div>
-                        <button type="submit" className="signin_btn" >Sign-In</button>
+              <button type="submit" className="signin_btn" onClick={(e) => {
+                e.preventDefault();
+                handleLoginSubmit(email, password);
+                        }} >Sign-In</button>
                     </form>
                
                 </div>
-                <div className="create_accountinfo">
+          <div className="create_accountinfo">
+            
                     <p>New to Amazon?</p>
-                    {/* <button>  <NavLink to="/signup">Create your Amazon Account</NavLink></button> */}
+                    <button>  <Link to="/register">Create your Amazon Account</Link></button>
                 </div>
             </div>
 
-        </section>
+      </section>
+      </>
     )
 }
 

@@ -11,6 +11,8 @@ import { ItemLandingPage015 } from './Components/ItemlandingPage/ItemLandingPage
 import { Login } from './Components/Login';
 import { Register } from './Components/Register';
 import { Trailer015 } from './Components/Trailer/Trailer';
+import Signup from './Components/SignUp';
+import SignIn from './Components/SignIn';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,8 +21,8 @@ ReactDOM.render(
         
       <Route path='/' element={<Firsthome/>}/>
         <Route path='/home' element={<App />}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
+        <Route path='/login' element={<SignIn/>}/>
+        <Route path='/register' element={<Signup/>}/>
         <Route path='/tvshows' element={<TVShowsPage015/>}/>
         <Route path='/movies' element={<MoviesPage015/>}/>
         <Route path='/watchmoviepage' element={<Trailer015/>}/>
