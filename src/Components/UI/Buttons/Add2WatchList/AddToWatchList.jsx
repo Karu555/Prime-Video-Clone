@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState } from "react";
 import { BsPlusLg } from "react-icons/bs";
 import { MessageBox } from "../../MessageBox/MessageBox";
