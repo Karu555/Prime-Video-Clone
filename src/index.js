@@ -15,8 +15,7 @@ import { Trailer015 } from './Components/Trailer/Trailer';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        
+      <Routes>        
       <Route path='/' element={<Firsthome/>}/>
         <Route path='/home' element={<App />}/>
         <Route path='/login' element={<Login/>}/>
