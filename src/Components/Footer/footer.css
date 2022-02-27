@@ -13,6 +13,7 @@
 color: #7A8D9C;
   }
   .footer{
-height: 25rem;
-text-align: center;
+    /* background-color: '#0F171E'; */
+    height: 25rem;
+    text-align: center;
   }

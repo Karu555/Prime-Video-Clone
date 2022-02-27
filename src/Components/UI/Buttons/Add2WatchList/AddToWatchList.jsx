@@ -11,7 +11,7 @@ export function AddToWatchList({ id, type,plusVisible, sendWatchListtoDB }) {
     (plusVisible ? 'Add to WatchList':'Remove from WatchList')
       :(plusVisible ? 'Add Season to WatchList':'Remove Season from WatchList') 
   
-  
+ 
 
   return <span style={{
     border:`3px solid ${!plusVisible?'white':'transparent'}`
