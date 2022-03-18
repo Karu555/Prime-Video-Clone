@@ -1,1 +1,8 @@
 node_modules
+
+# Local Netlify folder
+.netlify
+build
+public/_redirects
+
+.gitignore
