@@ -1,49 +1,50 @@
 /* body{
 } */
-.maindiv{
-
+.maindiv {
+  /* background-color: rgb(36, 33, 33); */
   margin-left: 3%;
   margin-right: 7%;
+  height: 100%;
 }
- .maindiv > p:first-child  {
-     display: inline-block;
-    color: white;
-    
-    font-size: 24px;
-    font-weight: 600;
-    border-bottom:1.5px solid white ;
-    width: auto;
+.maindiv > p:first-child {
+  display: inline-block;
+  color: white;
+
+  font-size: 24px;
+  font-weight: 600;
+  border-bottom: 1.5px solid white;
+  width: auto;
 }
-.subdiv{
-    color: white;
-    display: flex;
-    justify-content: space-between;
+.subdiv {
+  color: white;
+  display: flex;
+  justify-content: space-between;
 }
-.subdiv > div:first-child > p{
-    font-weight: 600;
-    font-size: 18px;
+.subdiv > div:first-child > p {
+  font-weight: 600;
+  font-size: 18px;
 }
-select{
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-weight: 600;
+select {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-weight: 600;
 }
 
-.subdiv > div:nth-child(2) > span:first-child{
-    color: rgb(199, 197, 197);
+.subdiv > div:nth-child(2) > span:first-child {
+  color: rgb(199, 197, 197);
 }
-option{
-    background-color: gray;
-   margin-top: 50px;
-   font-weight: 600;
-   color: white;
-   height: 350px;
+option {
+  background-color: gray;
+  margin-top: 50px;
+  font-weight: 600;
+  color: white;
+  height: 350px;
 }
 
-.watchlist-main{
+.watchlist-main {
   background-color: rgb(36, 33, 33);
-  border: 1px solid red;
-  width:100%;
-  height: 97vh;
+  /* border: 3px solid red; */
+  width: 100%;
+  /* height: 97vh; */
 }

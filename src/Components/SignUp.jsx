@@ -21,7 +21,8 @@ const Signup = () => {
         email,password,name
       }
       // console.log(user)
-      axios.post('http://localhost:8000/register', user).then((res) => {
+      // axios.post('http://localhost:8000/register', user).then((res) => {
+      axios.post('https://prime-video-backend.herokuapp.com/register', user).then((res) => {
         console.log(res.data)
         navigate('/login')        
       }).catch((error) => {
