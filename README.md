@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Prime Video Clone 
+## Unit -5 Construct Week Project
+Prime Video is Amazon's subscription video on-demand over-the-top streaming and rental service
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Statement : 
+**Build a full stack clone of the Prime Video website** 
 
-## Available Scripts
+## Tech Stack used : 
+### Front-end
+- HTML
+- CSS
+- JavaScript
+### Back-end
+- NodeJS
+- MongoDB
 
-In the project directory, you can run:
+## Useful Links :
+- **Github repo link :  https://github.com/Karu555/Prime-Video-Clone.git**
+- **Deployment link :  https://prime-video-amazon-clone.netlify.app/**
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Screenshots :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Landing Page :** 
 
-### `npm test`
+![Home1.PNG](https://i.ibb.co/dB14s0v/landing.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Login Page :** 
+ 
+![Home1.PNG](https://i.ibb.co/QCN6NLY/login.png)
 
-### `npm run build`
+- **Movie Landing Page:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Home1.PNG](https://i.ibb.co/sWdD7x1/movie-Landing.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **TV Shows page :**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Home1.PNG](https://i.ibb.co/1Gm10s7/TVShows-Landing.png) 
 
-### `npm run eject`
+![Home1.PNG](https://i.ibb.co/02NbMYv/tvShows2.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Show Landing page :**
+ 
+![Home1.PNG](https://i.ibb.co/z5pYDTm/tv-Show-landing-page.png)
+ 
+- **Trailer page :**
+ 
+![Home1.PNG](https://i.ibb.co/8jYKpnD/trailer-Page.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Creators 🤝🏻 ##
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Vishnu Nair](linkedin.com/in/nair-vishnu-s-81a678193)
+- [Karunesh Ranjan](linkedin.com/in/karunesh-ranjan-6515211a0)
+- [Renu Kumari](linkedin.com/in/renu-kumari-9b8528210)
+- [Biswajit Biswal](linkedin.com/in/biswajit-biswal-0ba098152)
+- [Rushikesh Pohare](linkedin.com/in/rushikesh-pohare)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
