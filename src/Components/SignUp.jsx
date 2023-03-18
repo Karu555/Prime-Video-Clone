@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import "./signup.css";
 import {SiPrimevideo} from 'react-icons/si'
 import { useNavigate } from 'react-router-dom';
+import { BACKEND_API } from './data/constants';
 
 
 const Signup = () => {
@@ -15,14 +16,14 @@ const Signup = () => {
   const [errors,setErrors]=useState([])
   
   function handleRegisterSubmit(email, password, name, repassword) {
-    if (repassword != password) alert('Passwords are not matching!! ')
+    if (repassword != password) alert('Passwords are not matching!! ');
     else {
       let user = {
         email,password,name
       }
       // console.log(user)
       // axios.post('http://localhost:8000/register', user).then((res) => {
-      axios.post('https://prime-video-backend.herokuapp.com/register', user).then((res) => {
+      axios.post(`${BACKEND_API}/register`, user).then((res) => {
         console.log(res.data)
         navigate('/login')        
       }).catch((error) => {

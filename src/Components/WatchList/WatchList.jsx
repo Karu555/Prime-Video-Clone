@@ -5,6 +5,7 @@ import "./watchlist2.css";
 import axios from "axios";
 import { Tray015 } from "../UI/Tray/Tray015";
 import { Box015 } from "../UI/Tray/Box/Box015";
+import { BACKEND_API } from "../data/constants";
 
 export function WatchList() {
   const [items, setItems] = useState([]);
@@ -13,7 +14,7 @@ export function WatchList() {
     // console.log('token',token)
     axios
       // .get("http://localhost:8000/watchList", {
-      .get("https://prime-video-backend.herokuapp.com/watchList", {
+      .get(`${BACKEND_API}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((el) => {

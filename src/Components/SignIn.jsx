@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import { SiPrimevideo } from "react-icons/si";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { BACKEND_API } from "./data/constants";
 
 const SignIn = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("******");
   const [errors, setError] = useState("");
 
   function handleLoginSubmit(email, password) {
@@ -18,7 +19,7 @@ const SignIn = () => {
     // console.log('here')
     axios
       // .post("http://localhost:8000/login", user)
-      .post("https://prime-video-backend.herokuapp.com/login", user)
+      .post(`${BACKEND_API}/login`, user)
       // .then((res) => {
       //   // axios
       //   // .post("https://protected-chamber-55418.herokuapp.com/login", {
@@ -97,6 +98,7 @@ const SignIn = () => {
                   name="email"
                   onChange={(e) => setEmail(e.target.value)}
                   id="email"
+                  value={email}
                 />
               </div>
               <div className="form_data">
@@ -106,6 +108,7 @@ const SignIn = () => {
                   name="password"
                   onChange={(e) => setPassword(e.target.value)}
                   id="password"
+                  value={password}
                   placeholder="At least 6 characters"
                 />
               </div>

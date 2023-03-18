@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { BACKEND_API } from "./data/constants";
 
 export function Login() {
   const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ export function Login() {
     // console.log('here')
     // axios.post('http://localhost:8000/login', user).then((res) => {
     axios
-      .post("https://protected-chamber-55418.herokuapp.com/login", user)
+      .post(`${BACKEND_API}/login`, user)
       .then((res) => {
         console.log(res.data);
       })
