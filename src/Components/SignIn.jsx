@@ -7,8 +7,8 @@ import { BACKEND_API } from "./data/constants";
 
 const SignIn = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("******");
+  const [email, setEmail] = useState("visitor@visitor.com");
+  const [password, setPassword] = useState(123456);
   const [errors, setError] = useState("");
 
   function handleLoginSubmit(email, password) {
